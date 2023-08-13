@@ -1,8 +1,4 @@
-import { useCallback } from "react";
-import "antd/dist/antd.min.css";
-import { Menu, Dropdown, Button } from "antd";
 import {
-  DownOutlined,
   ArrowLeftOutlined,
   ArrowRightOutlined,
   CalendarOutlined,
@@ -10,6 +6,7 @@ import {
   ClockCircleOutlined,
   CloseOutlined,
   DeleteOutlined,
+  DownOutlined,
   EditOutlined,
   ExclamationCircleOutlined,
   HeartOutlined,
@@ -26,13 +23,16 @@ import {
   ShareAltOutlined,
   UserOutlined,
 } from "@ant-design/icons";
+import { Button, Dropdown, Menu } from "antd";
+import "antd/dist/antd.min.css";
 import { useRouter } from "next/router";
+import { useCallback } from "react";
 
 const Hero = () => {
   const router = useRouter();
 
   const onSearchCTAClick = useCallback(() => {
-    router.push("/");
+    router.push("/properties");
   }, [router]);
 
   return (

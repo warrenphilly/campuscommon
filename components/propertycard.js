@@ -1,64 +1,25 @@
-
-const Propertycard = ({imgUrl,name,price}) => {
-
+const Propertycard = ({ imgUrl, name, price }) => {
   return (
-    <div
-      className="rounded-3xs bg-gray-white box-border w-[350px] h-[466.99px] flex flex-col py-[15px] px-[13px] items-start justify-start gap-[23px] text-left text-[14.51px] text-gray-700 font-body-regular-600 border-[1px] border-solid border-whitesmoke-200 hover:bg-gainsboro hover:cursor-pointer sm:w-[100%!important] sm:mb-5"
-    
-    >
+    <div className="rounded-3xs bg-gray-white box-border w-[350px] h-[466.99px] flex flex-col py-[15px] px-[13px] items-start justify-start gap-[23px] text-left text-[14.51px] text-gray-700 font-body-regular-600 border-[1px] border-solid border-whitesmoke-200 hover:bg-gainsboro hover:cursor-pointer sm:w-[100%!important] sm:mb-5">
       <img
         className=" rounded-3xs max-w-full overflow-hidden h-[200px] shrink-0 object-cover"
         alt=""
         src={imgUrl}
-        
       />
-      <div
-        className="flex flex-row p-2.5 items-start justify-start"
-        
-      >
-        <div
-          className="flex-1  leading-[20.32px] font-medium"
-         
-        >
-          {name}
-        </div>
+      <div className="flex flex-row p-2.5 items-start justify-start">
+        <div className="flex-1  leading-[20.32px] font-medium">{name}</div>
       </div>
-      <div
-        className="flex flex-row p-2.5 items-start justify-start text-[13.55px] text-goldenrod"
-     
-      >
-        <div
-          className=" leading-[18.98px] font-semibold"
-          
-        >
-          {price}
-        </div>
+      <div className="flex flex-row p-2.5 items-start justify-start text-[13.55px] text-goldenrod">
+        <div className=" leading-[18.98px] font-semibold">{price}</div>
       </div>
-      <div
-        className=" flex flex-row py-0 px-2.5 items-start justify-start gap-[17px] text-[10.84px] text-gray-500"
-       
-      >
+      <div className=" flex flex-row py-0 px-2.5 items-start justify-start gap-[17px] text-[10.84px] text-gray-500">
         <div className="flex flex-row items-center justify-start gap-[4.35px]">
           <img className=" w-[17.42px] h-[17.42px]" alt="" src="/car.svg" />
-          <div
-            className=" leading-[16.27px] font-medium"
-       
-          >
-            4
-          </div>
+          <div className=" leading-[16.27px] font-medium">4</div>
         </div>
         <div className="flex flex-row items-center justify-start gap-[4.35px]">
-          <img
-            className=" w-[17.42px] h-[17.42px]"
-            alt=""
-            src="/bathtub.svg"
-          />
-          <div
-            className=" leading-[16.27px] font-medium"
-         
-          >
-            4
-          </div>
+          <img className=" w-[17.42px] h-[17.42px]" alt="" src="/bathtub.svg" />
+          <div className=" leading-[16.27px] font-medium">4</div>
         </div>
         <div className="flex flex-row items-center justify-start gap-[4.35px]">
           <img
@@ -66,12 +27,7 @@ const Propertycard = ({imgUrl,name,price}) => {
             alt=""
             src="/arrowsout.svg"
           />
-          <div
-            className=" leading-[16.27px] font-medium"
-           
-          >
-            2,096.00 ft
-          </div>
+          <div className=" leading-[16.27px] font-medium">2,096.00 ft</div>
         </div>
       </div>
       <div className="flex flex-row items-center justify-between text-center text-[11.61px]">
@@ -80,14 +36,8 @@ const Propertycard = ({imgUrl,name,price}) => {
             className=" rounded-[50%] w-[27.57px] h-[27.57px] object-cover"
             alt=""
             src="/ellipse-1@2x.png"
-    
           />
-          <div
-            className=" leading-[17.42px] font-medium"
-          
-          >
-            Jenny Wilson
-          </div>
+          <div className=" leading-[17.42px] font-medium">Jenny Wilson</div>
         </div>
         <div className="flex flex-row items-start justify-start gap-[8.71px]">
           <div className="rounded-31xl bg-oldlace flex flex-row p-[2.902620315551758px] items-start justify-start">
@@ -98,18 +48,10 @@ const Propertycard = ({imgUrl,name,price}) => {
             />
           </div>
           <div className="rounded-31xl bg-oldlace flex flex-row p-[2.902620315551758px] items-start justify-start">
-            <img
-              className=" w-[14.51px] h-[14.51px]"
-              alt=""
-              src="/heart.svg"
-            />
+            <img className=" w-[14.51px] h-[14.51px]" alt="" src="/heart.svg" />
           </div>
           <div className="rounded-31xl bg-oldlace flex flex-row p-[2.902620315551758px] items-start justify-start">
-            <img
-              className=" w-[14.51px] h-[14.51px]"
-              alt=""
-              src="plus.svg"
-            />
+            <img className=" w-[14.51px] h-[14.51px]" alt="" src="plus.svg" />
           </div>
         </div>
       </div>

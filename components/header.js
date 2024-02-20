@@ -1,42 +1,44 @@
-import Link from 'next/link'
+import Link from "next/link";
 
 const Header = ({ showHamburgerMenuIcon }) => {
   return (
-    <header className="self-stretch bg-gray-white h-[98px] flex flex-row py-[22px] px-20 box-border items-center justify-center sticky w-full top-[0] [background:white] z-[2] text-center text-5xl text-goldenrod font-body-regular-600 lg:pl-10 lg:pr-10 lg:box-border md:pl-6 md:pr-6 md:box-border">
+    <header className="self-stretch bg-gray-white h-[98px] flex flex-row py-[22px] px-20 box-border items-center justify-center sticky w-full top-[0] [background:white]  text-center text-5xl text-goldenrod font-body-regular-600 lg:pl-10 lg:pr-10 lg:box-border md:pl-6 md:pr-6 md:box-border">
       <div className="flex-1 flex flex-row items-center justify-between">
-        <Link href="/" className="flex flex-row items-center justify-center gap-[8px]">
-          <img className="relative w-11 h-11" alt="" src="/houseline.svg" />
+        <Link
+          href="/"
+          className="flex flex-row items-center justify-center gap-[8px]"
+        >
+        
           <div className="flex flex-col items-start justify-start">
             <div className="relative leading-[24px] font-semibold">
-              Warren’s Real Estate
-            </div>
-            <div className="relative text-sm leading-[16px] font-medium">
-              The Home for Homes
+              <img
+                className=" rounded-3xs overflow-hidden h-[60px] shrink-0 object-cover"
+                alt=""
+                src="/assets/logo.png"
+              />
             </div>
           </div>
         </Link>
         <div className="flex flex-row items-center justify-end gap-[36px] text-sm text-primary-900 sm:flex">
           <div className="flex flex-row items-start justify-start gap-[30px]">
-            <div className="relative leading-[22px]">HOME</div>
-            <div className="relative leading-[22px]">ABOUT US</div>
-            <div className="relative leading-[22px]">OUR AGENTS</div>
-            <div className="relative leading-[22px] font-semibold">
-              PROPERTIES
-            </div>
-            <div className="relative leading-[22px]">GALLERY</div>
-            <div className="relative leading-[22px]">BLOG</div>
-            <div className="relative leading-[22px]">CONTACT US</div>
-            <div className="relative leading-[22px]">SEARCH</div>
+            <div className="  mt-[15px] leading-[22px] ">Find your home</div>
+            <div className="  mt-[15px] leading-[22px] ">Find Tenants</div>
+            <div className=" mt-[15px] leading-[22px] ">About us</div>
+            <div className="mt-[15px] leading-[22px] ">Memberships</div>
+            <div className=" mt-[15px] leading-[22px] ">FAQ</div>
+            <div className="  mt-[15px] leading-[22px] ">Contact</div>
+
+            <button className="cursor-pointer [border:none] py-3 px-6 bg-red-500 rounded overflow-hidden flex flex-row items-start justify-start">
+              <div className=" text-base leading-[24px] font-medium font-body-regular-600 text-gray-white text-center">
+                Login
+              </div>
+            </button>
+            <button className="cursor-pointer border-1 border-red-500 py-3 px-6 rounded  items-start justify-start">
+              <div className="relative text-base leading-[24px] font-medium font-body-regular-600 text-red-500 text-center">
+                List with us
+              </div>
+            </button>
           </div>
-          <button className="cursor-pointer [border:none] p-0 bg-[transparent] flex flex-row items-center justify-center">
-            {showHamburgerMenuIcon && (
-              <img
-                className="relative w-6 h-6 overflow-hidden shrink-0 md:flex"
-                alt=""
-                src="/notification.svg"
-              />
-            )}
-          </button>
         </div>
       </div>
     </header>

@@ -15,15 +15,17 @@ const LandingPage = () => {
         <title>Real estate</title>
         <meta name="description" content="Time to find your dream house" />
       </Head>
-      <div className="relative bg-gray-white w-full flex flex-col items-center justify-start">
+      <div className="relative bg-[#fbfbfb] w-full flex flex-col items-center justify-start">
         <Header showHamburgerMenuIcon={false} />
         <Hero />
-        <AreaContainer />
+
         <FeatureContainer />
-        <RentPropertiesContainer />
+        <AreaContainer />
         <RentPropertiesForm />
+        {/* <RentPropertiesContainer /> */}
+        
         <Contact />
-        <Footer />
+        {/* <Footer /> */}
       </div>
     </>
   );

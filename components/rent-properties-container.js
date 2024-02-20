@@ -5,7 +5,7 @@ const RentPropertiesContainer = () => {
     <form className="self-stretch flex flex-col py-[86px] px-0 items-center justify-start gap-[39px]">
       <div className="self-stretch flex flex-col items-center justify-start gap-[40px] max-w-[95%px] md:pl-[60px] md:pr-[60px] md:box-border">
         <div className="w-[688px] flex flex-col items-center justify-start gap-[24px] max-w-[95%px] lg:max-w-[95%] md:self-stretch md:w-auto">
-          <div className="self-stretch relative text-21xl leading-[48px] font-semibold font-body-regular-600 text-primary-800 text-center">
+          <div className="self-stretch relative text-21xl leading-[48px] font-semibold font-body-regular-600 text-[#e34848] text-center">
             Latest Properties of Rent
           </div>
           <div className="self-stretch relative text-xl leading-[28px] font-body-regular-600 text-lightslategray text-center">

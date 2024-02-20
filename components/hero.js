@@ -27,7 +27,7 @@ import { Button, Dropdown, Menu } from "antd";
 import "antd/dist/antd.min.css";
 import { useRouter } from "next/router";
 import { useCallback } from "react";
-
+import VideoBackground from "../components/VideoBackground";
 const Hero = () => {
   const router = useRouter();
 
@@ -36,129 +36,59 @@ const Hero = () => {
   }, [router]);
 
   return (
-    <div className="self-stretch flex flex-col py-[120px] px-[30px] items-center justify-start bg-[url(/hero-section@3x.png)] bg-cover bg-no-repeat bg-[top] text-center text-33xl text-gray-white font-body-regular-400">
-      <div className="self-stretch flex flex-col items-center justify-center gap-[62px] max-w-[95%px]">
-        <div className="self-stretch flex flex-col items-center justify-start gap-[24px] md:max-w-full">
-          <div className="self-stretch relative leading-[72px] font-semibold">
-            Find Your Dream Home
+    // <div className="self-stretch flex flex-col h-[650px] justify-center py-[120px] px-[30px] items-center bg-[url(/video/RealEstateApp/public/video/campusconnect_broll_2.mp4)] bg-cover bg-no-repeat bg-[top] text-center text-33xl text-gray-white font-body-regular-400">
+    //   <div className="self-stretch flex flex-col items-center justify-center gap-[62px] max-w-[95%px]">
+    //     <div className="self-stretch flex flex-col items-center justify-start gap-[24px] md:max-w-full">
+    //       <div className="self-stretch relative leading-[72px] font-semibold">
+    //         Let us take the stress out of Searching...
+    //       </div>
+    //     </div>
+    //     <div className="self-stretch flex flex-col items-center justify-start gap-[17px] text-left text-base  font-body-regular-600">
+    //       <div className="flex flex-row items-start justify-start gap-[10px]">
+    //         <button className="cursor-pointer [border:none] py-3 px-6  bg-red-500 rounded items-start justify-start">
+    //           <div className="relative text-base leading-[24px] font-medium font-body-regular-600 text-gray-white text-center">
+    //             Explore Now
+    //           </div>
+    //         </button>
+    //         <button className="cursor-pointer [border:none] py-3 px-6 bg-gray-white rounded overflow-hidden flex flex-row items-start justify-start hover:bg-whitesmoke-100 ">
+    //           <div className="relative text-base leading-[24px]  text-red-500 text-center">
+    //             Find your home
+    //           </div>
+    //         </button>
+    //       </div>
+    //     </div>
+    //   </div>
+    // </div>
+    <div className="relative w-full h-[650px] self-stretch overflow-hidden">
+      {/* Video as background */}
+      <video
+        autoPlay
+        muted
+        loop
+        className="absolute z-10 top-0 left-0 w-full h-full object-cover"
+      >
+        <source src="/video/campusconnect_broll_2.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+
+      {/* White overlay */}
+      <div className="absolute z-20 w-full h-full bg-[#e75252] opacity-50"></div>
+
+      {/* Content overlay */}
+      <div className="flex z-30 bg-transparent flex-col justify-center py-[120px] px-[30px] items-center text-center text-3xl text-gray-800 font-body-regular-400 absolute top-0 left-0 w-full h-full">
+        <div className="flex flex-col items-center justify-center gap-[62px]">
+          <div className="flex flex-col text-33xl text-gray-white font-body-regular-400 items-center justify-start gap-[24px]">
+            <div className="relative leading-[72px] flex-wrap w-[650px] font-semibold text-white">
+              Find your Next Perfect Place To Live
+            </div>
           </div>
-          <div className="self-stretch relative text-xl leading-[28px] font-body-regular-600 text-primary-50">
-            Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
-            posuere cubilia curae; Proin sodales ultrices nulla blandit
-            volutpat.
-          </div>
-        </div>
-        <div className="self-stretch flex flex-col items-center justify-start gap-[17px] text-left text-base text-goldenrod font-body-regular-600">
-          <div className="flex flex-row items-start justify-start gap-[10px]">
-            <button className="cursor-pointer [border:none] py-3 px-6 bg-goldenrod rounded overflow-hidden flex flex-row items-start justify-start">
-              <div className="relative text-base leading-[24px] font-medium font-body-regular-600 text-gray-white text-center">
-                Properties for Rent
-              </div>
-            </button>
-            <button className="cursor-pointer [border:none] py-3 px-6 bg-gray-white rounded overflow-hidden flex flex-row items-start justify-start hover:bg-whitesmoke-100">
-              <div className="relative text-base leading-[24px] font-medium font-body-regular-600 text-goldenrod text-center">
-                Properties for Sale
-              </div>
-            </button>
-          </div>
-          <div className="self-stretch flex flex-row flex-wrap items-start justify-center">
-            <div className="flex-1 rounded-lg bg-gray-white flex flex-row py-8 px-[62px] box-border items-center justify-between max-w-[1400px] md:w-[300px] md:flex-col md:gap-[20px] md:items-start md:justify-start md:ml-[auto] md:mr-[auto]">
-              <div className="w-[137px] flex flex-col items-start justify-start gap-[16px] text-center">
-                <div className="relative leading-[24px] capitalize font-semibold">
-                  Locations
-                </div>
-                <Dropdown
-                  overlay={
-                    <Menu>
-                      {[{ value: "Toronto" }, { value: "Montreal" }].map(
-                        (option, index) => (
-                          <Menu.Item key={index}>
-                            <a onClick={(e) => e.preventDefault()}>
-                              {option.value || ""}
-                            </a>
-                          </Menu.Item>
-                        )
-                      )}
-                    </Menu>
-                  }
-                  placement="bottomLeft"
-                  trigger={["hover"]}
-                >
-                  <Button onClick={(e) => e.preventDefault()}>
-                    {`Select your city `}
-                    <DownOutlined />
-                  </Button>
-                </Dropdown>
-              </div>
-              <div className="w-[177px] flex flex-col items-start justify-start gap-[16px]">
-                <div className="relative leading-[24px] capitalize font-semibold flex items-end w-[150px]">
-                  Property Type
-                </div>
-                <Dropdown
-                  className="self-stretch"
-                  overlay={
-                    <Menu>
-                      {[
-                        { value: "Studio apartments" },
-                        { value: "One-bedroom apartments" },
-                        { value: "Two-bedroom apartments" },
-                        { value: "Three-bedroom apartments" },
-                        { value: "Four or more bedroom apartments/houses" },
-                      ].map((option, index) => (
-                        <Menu.Item key={index}>
-                          <a onClick={(e) => e.preventDefault()}>
-                            {option.value || ""}
-                          </a>
-                        </Menu.Item>
-                      ))}
-                    </Menu>
-                  }
-                  placement="bottomLeft"
-                  trigger={["hover"]}
-                >
-                  <a onClick={(e) => e.preventDefault()}>
-                    {`Select property type `}
-                    <DownOutlined />
-                  </a>
-                </Dropdown>
-              </div>
-              <div className="w-[155px] flex flex-col items-start justify-start gap-[16px]">
-                <div className="relative leading-[24px] capitalize font-semibold flex items-end w-[150px]">
-                  Rent Range
-                </div>
-                <Dropdown
-                  className="self-stretch"
-                  overlay={
-                    <Menu>
-                      {[
-                        { value: "$500-$2000" },
-                        { value: "$2500-$10000" },
-                        { value: "$10000+" },
-                      ].map((option, index) => (
-                        <Menu.Item key={index}>
-                          <a onClick={(e) => e.preventDefault()}>
-                            {option.value || ""}
-                          </a>
-                        </Menu.Item>
-                      ))}
-                    </Menu>
-                  }
-                  placement="bottomLeft"
-                  trigger={["hover"]}
-                >
-                  <a onClick={(e) => e.preventDefault()}>
-                    {`Select rent range `}
-                    <DownOutlined />
-                  </a>
-                </Dropdown>
-              </div>
-              <button
-                className="cursor-pointer [border:none] py-3 px-6 bg-goldenrod rounded w-[102px] flex flex-row box-border items-center justify-center hover:bg-darkgoldenrod"
-                onClick={onSearchCTAClick}
-              >
-                <div className="relative text-base leading-[24px] font-medium font-body-regular-600 text-gray-white text-center">
-                  Search
-                </div>
+          <div className="flex flex-col items-center justify-start gap-[17px] text-left text-base">
+            <div className="flex flex-row items-start justify-start gap-[10px]">
+              <button className="cursor-pointer py-3 px-6 bg-red-500 rounded text-white text-center">
+                Explore Now
+              </button>
+              <button className="cursor-pointer py-3 px-6 bg-white rounded overflow-hidden hover:bg-gray-100 text-red-500 text-center">
+                Find your home
               </button>
             </div>
           </div>

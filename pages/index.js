@@ -16,7 +16,7 @@ const LandingPage = () => {
         <meta name="description" content="Time to find your dream house" />
       </Head>
       <div className="relative bg-[#fbfbfb] w-full flex flex-col items-center justify-start">
-        <Header showHamburgerMenuIcon={false} />
+        <Header showHamburgerMenuIcon={true} />
         <Hero />
 
         <FeatureContainer />

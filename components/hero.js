@@ -77,8 +77,8 @@ const Hero = () => {
       {/* Content overlay */}
       <div className="flex z-30 bg-transparent flex-col justify-center py-[120px] px-[30px] items-center text-center text-3xl text-gray-800 font-body-regular-400 absolute top-0 left-0 w-full h-full">
         <div className="flex flex-col items-center justify-center gap-[62px]">
-          <div className="flex flex-col text-33xl text-gray-white font-body-regular-400 items-center justify-start gap-[24px]">
-            <div className="relative leading-[72px] flex-wrap w-[650px] font-semibold text-white">
+          <div className="flex flex-col  text-gray-white font-body-regular-400 items-center justify-start gap-[24px]">
+            <div className="relative leading-[72px] text-33xl lg:text-[30px] flex-wrap w-[650px] lg:w-[300px] font-semibold text-white">
               Find your Next Perfect Place To Live
             </div>
           </div>

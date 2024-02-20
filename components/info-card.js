@@ -7,8 +7,10 @@ const InfoCard = ({ listingId, actionText, propWidth, descText }) => {
     };
   }, [propWidth]);
 
+
   return (
-    <div
+
+<div
       className="rounded bg-[#ffffff] shadow-[0px_24px_68px_rgba(59,_77,_129,_0.08)] flex flex-col p-[22px] box-border items-start justify-start w-[340px] h-[340] text-center text-5xl text-gray-700 font-body-regular-600"
       style={sellYourHomeStyle}
     >

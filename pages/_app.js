@@ -6,7 +6,7 @@ function MyApp({ Component, pageProps }) {
   return (
     <React.Fragment>
       <Head>
-        <title>warren Real Estate</title>
+        <title>Campus Connect - find your new hOMe</title>
         <meta
           name="viewport"
           content="minimum-scale=1, initial-scale=1, width=device-width"

@@ -8,6 +8,7 @@ import RentPropertiesForm from "../components/rent-properties-form";
 import Contact from "../components/contact";
 import Footer from "../components/footer";
 
+
 const LandingPage = () => {
   return (
     <>

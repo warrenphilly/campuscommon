@@ -80,22 +80,24 @@ const Header = () => {
               <div className="  mt-[15px] leading-[22px] ">Find your home</div>
               <div className="  mt-[15px] leading-[22px] ">Find Tenants</div>
               <div className=" mt-[15px] leading-[22px] ">About us</div>
-              <div className="mt-[15px] leading-[22px] ">Memberships</div>
+
+              <Link href="/memberships" className="mt-[15px] leading-[22px]">
+                Memberships
+              </Link>
               <div className=" mt-[15px] leading-[22px] ">FAQ</div>
               <div className="  mt-[15px] leading-[22px] ">Contact</div>
             </div>
 
             <button className="cursor-pointer [border:none] py-3 h-[50px] lg:h-[40px] sm:h-[30px] text-gray-white text-center px-6 bg-red-500 rounded overflow-hidden flex flex-row justify-center  sm:text-[8px] lg:text-[12px]">
-              
-                Login
-           
+              Login
             </button>
             <button className="cursor-pointer text-red-500 text-center border-1 h-[50px] sm:h-[30px] lg:h-[40px] justify-center border-red-500 py-3 px-6 rounded sm:text-[8px] lg:text-[12px]">
-         
-                List with us
-      
+              List with us
             </button>
-            <button onClick={toggleSidebar} className="hidden cursor-pointer pt-[4px] bg-white md:block">
+            <button
+              onClick={toggleSidebar}
+              className="hidden cursor-pointer pt-[4px] bg-white md:block"
+            >
               <svg
                 className="h-8 w-8 text-gray-800 bg-white"
                 viewBox="0 0 20 20"
@@ -151,12 +153,13 @@ const Header = () => {
           >
             About us
           </a>
-          <a
-            href="#"
+          <Link
+            href="/memberships"
             className="text-gray-700 text-lg py-2 px-4 hover:bg-gray-100"
           >
-            Memberships
-          </a>
+            Membershipsss
+          </Link>
+
           <a
             href="#"
             className="text-gray-700 text-lg py-2 px-4 hover:bg-gray-100"
